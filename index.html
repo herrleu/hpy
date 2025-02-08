@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Request</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            background-color: #fce4ec;
+        }
+        h1 {
+            font-size: 36px;
+            color: #ff4081;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .checkbox {
+            margin: 20px;
+            font-size: 18px;
+        }
+        #yes {
+            width: 20px;
+            height: 20px;
+        }
+        #no {
+            width: 20px;
+            height: 20px;
+        }
+        .happy-cat {
+            display: none;
+            margin-top: 20px;
+        }
+        .yes-checked {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will you be my Valentine?</h1>
+
+    <div class="container">
+        <label class="checkbox">
+            <input type="checkbox" id="yes-checkbox" onclick="handleYesClick()"> Yes
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" id="no-checkbox" onclick="handleNoClick()"> No
+        </label>
+    </div>
+
+    <img id="happy-cat1" class="happy-cat" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Cat_face_happy.svg" alt="Happy Cat" width="100">
+    <div id="happy-cat" class="tenor-gif-embed happy-cat" data-postid="14855460725867107717" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/little-cute-cat-dancing-gif-14855460725867107717">Little Cute GIF</a>from <a href="https://tenor.com/search/little-gifs">Little GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <script>
+        function handleYesClick() {
+            const happyCat = document.getElementById('happy-cat');
+            if (document.getElementById('yes-checkbox').checked) {
+                happyCat.style.display = 'block';
+            }
+        }
+
+        function handleNoClick() {
+            const yesCheckbox = document.getElementById('yes-checkbox');
+            if (document.getElementById('no-checkbox').checked) {
+                yesCheckbox.style.width = '40px';
+                yesCheckbox.style.height = '40px';
+            } else {
+                yesCheckbox.style.width = '20px';
+                yesCheckbox.style.height = '20px';
+            }
+        }
+    </script>
+
+</body>
+</html>
